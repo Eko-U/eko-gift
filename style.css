@@ -11,8 +11,19 @@
 }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%;
 }
+/* @media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+} */
 
 body {
   font-family: var(--font-primary);
@@ -23,6 +34,8 @@ body {
   justify-content: center;
 
   color: #161616;
+
+  overflow-x: scroll;
 }
 
 .container {
@@ -76,6 +89,13 @@ body {
 section,
 .header {
   padding: 8rem 15rem;
+  @media only screen and (max-width: 71.875em) {
+    padding: 5.5rem 10rem;
+  }
+
+  @media only screen and (max-width: 62.5em) {
+    padding: 5rem 7.5rem;
+  }
 }
 
 .btn {
@@ -124,7 +144,12 @@ h2 {
   padding: 1rem;
 
   background-color: rgb(245, 240, 240);
+
+  display: none;
 }
+
+/* @media only screen and (max-width: ) {
+} */
 
 .logo {
   text-decoration: none;
@@ -149,15 +174,32 @@ section:nth-child(even) {
 
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 48em) {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.8rem;
+  }
 }
 
 .header .left {
   line-height: 1;
+
+  @media screen and (max-width: 71.875em) {
+  }
+
+  @media only screen and (max-width: 48em) {
+    order: 2;
+  }
 }
 
 .header .left .name {
   font-size: 7rem;
   margin-bottom: 0.5rem;
+
+  @media screen and (max-width: 71.875em) {
+    font-size: 5rem;
+  }
 }
 
 .header .left .title {
@@ -169,6 +211,15 @@ section:nth-child(even) {
   width: 20rem;
   border-radius: 50rem;
   object-fit: top;
+
+  @media only screen and (max-width: 62.5em) {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  @media only screen and (max-width: 48em) {
+    order: 1;
+  }
 }
 
 /* ABOUT SECTION */
@@ -181,6 +232,11 @@ section:nth-child(even) {
 .section-about-me-details {
   display: flex;
   gap: 5rem;
+
+  @media only screen and (max-width: 46.875em) {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
 .section-about-me-details p {
@@ -191,13 +247,20 @@ section:nth-child(even) {
   hyphens: auto;
 
   padding-right: 15rem;
+
+  @media screen and (max-width: 62.5em) {
+    padding: 0;
+  }
 }
 
 .about-me-pix {
   height: 25rem;
   width: 40rem;
 
-  border-radius: 1rem;
+  @media only screen and (max-width: 46.875em) {
+    width: 20rem;
+    height: 20rem;
+  }
 }
 
 .about-me-btn {
@@ -309,11 +372,17 @@ section:nth-child(even) {
 /* CONTACT FORM */
 
 .section-contact {
+  /* display: none; */
 }
 
 .contact-details {
   display: flex;
   gap: 8rem;
+
+  @media only screen and (max-width: 53.625em) {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
 .contact-details-info {
@@ -321,6 +390,10 @@ section:nth-child(even) {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  @media only screen and (max-width: 53.625em) {
+    flex-basis: auto;
+  }
 
   & p {
     display: flex;
