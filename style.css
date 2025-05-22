@@ -364,6 +364,15 @@ section:nth-child(even) {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
+
+  @media only screen and (max-width: 62.5em) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  @media only screen and (max-width: 42.1875em) {
+    display: block;
+  }
 }
 
 .project {
