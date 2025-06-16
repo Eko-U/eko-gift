@@ -3,20 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Martian+Mono:wght@100..800&display=swap"
       rel="stylesheet"
     />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="style.css" />
 
-    <title>Document</title>
+    <title>Eko Gift | Software Engineer</title>
   </head>
   <body>
     <div class="container">
@@ -43,21 +40,52 @@
             <a href="#contact-me">Contact</a>
           </li>
         </ul>
+
+        <ion-icon class="menu-outline" name="menu-outline"></ion-icon>
       </nav>
 
       <header class="header">
         <div class="left">
           <h1 class="name">Gift Eko</h1>
           <p class="title">
-            Software engineer | JavaScript | Reactjs | Nodejs | Git
+            Software engineer | Just want to build things on-line
           </p>
         </div>
 
         <img src="./images/pic.jpg" alt="" class="headshot" />
       </header>
 
-      <!-- <section id="skills">
-        <h2>Skills</h2>
+      <aside class="side-nav hidden">
+        <nav class="side-navigation">
+          <a class="side-logo logo" href="/"> CodeWithGift </a>
+          <ul class="side-list list">
+            <li class="side-list-item list-item">
+              <a href="#about-me">About</a>
+            </li>
+
+            <li class="side-nav-list-item list-item">
+              <a href="#experience">Experience</a>
+            </li>
+
+            <li class="side-nav-list-item list-item">
+              <a href="#education">Education</a>
+            </li>
+
+            <li class="side-nav-list-item list-item">
+              <a href="#projects">Projects</a>
+            </li>
+
+            <li class="side-nav-list-item list-item">
+              <a href="#contact-me">Contact</a>
+            </li>
+          </ul>
+
+          <ion-icon name="close-outline"></ion-icon>
+        </nav>
+      </aside>
+
+      <section id="skills">
+        <h2><span class="heading-2"> Skills </span></h2>
 
         <div class="skills-list">
           <span class="uppercase skill">Html5</span>
@@ -75,7 +103,7 @@
           <span class="skill">SQL</span>
           <span class="skill">MySQL</span>
         </div>
-      </section> -->
+      </section>
 
       <section id="about-me" class="section-about-me">
         <h2><span class="heading-2"> About </span></h2>
@@ -139,25 +167,8 @@
 
         <div class="work-experience-list">
           <div class="work-experience-item">
-            <span class="work-type">Full-time</span>
-            <img src="" alt="" class="work-company-image" />
-            <div class="work-company">
-              <span class="work-company-name"
-                >Kasa Technology Training Institutes</span
-              >
-              <span class="work-company-role-location">
-                <span>Web Instructor</span>
-                |
-                <span>Warri, Nigeria</span>
-              </span>
-
-              <span class="work-duration">January 2025 - Present</span>
-            </div>
-          </div>
-
-          <div class="work-experience-item">
             <span class="work-type">Contract</span>
-            <img src="" alt="" class="work-company-image" />
+            <!-- <img src="" alt="" class="work-company-image" /> -->
             <div class="work-company">
               <span class="work-company-name"
                 >Kasa Technology Training Institutes</span
@@ -181,7 +192,11 @@
 
         <div class="work-experience-list">
           <div class="work-experience-item">
-            <img src="" alt="" class="work-company-image" />
+            <img
+              src="./images/sch_logo.png"
+              alt="pti school logo"
+              class="school_logo"
+            />
             <div class="work-company">
               <span class="work-company-name"
                 >Petroleum Training Institute Effurun</span
@@ -198,7 +213,11 @@
           </div>
 
           <div class="work-experience-item">
-            <img src="" alt="" class="work-company-image" />
+            <img
+              src="./images/sch_logo.png"
+              alt="pti school logo"
+              class="school_logo"
+            />
             <div class="work-company">
               <span class="work-company-name"
                 >Petroleum Training Institute Effurun</span
@@ -290,5 +309,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
+    <script src="./app.js"></script>
   </body>
 </html>
