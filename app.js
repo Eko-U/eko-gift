@@ -1,6 +1,9 @@
 const el = document.querySelector(".list");
-const sideMenuEl = document.querySelector(".menu-outline");
 const sideNav = document.querySelector(".side-nav");
+const overlayEl = document.querySelector(".overlay");
+
+const sideMenuBtn = document.querySelector(".menu-outline");
+const closeBtn = document.querySelector(".close-outline");
 
 el.addEventListener("click", function (e) {
   e.preventDefault();
@@ -17,6 +20,13 @@ el.addEventListener("click", function (e) {
   });
 });
 
-sideMenuEl.addEventListener("click", function () {
+function toggleFn(e) {
+  e.preventDefault();
   sideNav.classList.toggle("hidden");
-});
+  overlayEl.classList.toggle("hidden");
+  document.body.classList.toggle("no-scroll");
+}
+
+sideMenuBtn.addEventListener("click", toggleFn);
+closeBtn.addEventListener("click", toggleFn);
+overlayEl.addEventListener("click", toggleFn);

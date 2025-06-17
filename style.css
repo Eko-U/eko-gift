@@ -45,6 +45,28 @@ ion-icon {
   display: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.overlay {
+  height: 100dvh;
+  width: 100dvw;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 30;
+
+  background-color: rgba(213, 213, 213, 0.452);
+  backdrop-filter: blur(5px);
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -156,6 +178,7 @@ h2 {
   padding: 1rem;
 
   background-color: rgb(236, 236, 236);
+  position: relative;
 }
 
 /* @media only screen and (max-width: ) {
@@ -536,12 +559,26 @@ ion-icon {
 
 aside {
   background-color: rgb(231, 231, 231);
-  width: 50rem;
+  width: 30rem;
+  height: 100dvh;
 
   margin: 0 auto;
   padding: 5rem;
 
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: 50;
+
+  @media only screen and (max-width: 26.1875em) {
+    width: 20rem;
+    padding: 2rem;
+  }
+
+  @media only screen and (max-width: 13.375em) {
+    width: 100vw;
+  }
 }
 
 .side-navigation {
@@ -578,6 +615,8 @@ aside {
   margin: 0;
   gap: 2rem;
   width: 100%;
+
+  display: block !important;
 
   & li {
     display: block;
