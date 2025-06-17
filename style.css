@@ -1,6 +1,11 @@
 :root {
-  --font-primary: "inter", sans-serif;
   --font-primary: "Martian Mono", monospace;
+  --color-grey-50: rgb(245, 245, 245);
+  --color-grey-100: rgb(236, 236, 236);
+  --color-grey-200: rgb(90, 90, 90);
+  --color-grey-300: rgb(61, 61, 61);
+
+  --color-black: #2f2f2f;
 }
 
 *,
@@ -34,7 +39,7 @@ body {
   display: grid;
   justify-content: center;
 
-  color: #2d2d2d;
+  color: var(--color-black);
 }
 
 ion-icon {
@@ -69,10 +74,6 @@ ion-icon {
 
 .uppercase {
   text-transform: uppercase;
-}
-
-.logo {
-  align-self: center;
 }
 
 .list {
@@ -113,7 +114,7 @@ ion-icon {
 
 .list-item a:link,
 .list-item a:visited {
-  color: #161616;
+  color: var(--color-black);
 }
 
 section,
@@ -177,30 +178,36 @@ h2 {
   height: 4rem;
   padding: 1rem;
 
-  background-color: rgb(236, 236, 236);
-  position: relative;
+  background-color: var(--color-grey-100);
+
+  /* position: fixed;
+  width: 100vw;
+  z-index: 40; */
 }
 
 /* @media only screen and (max-width: ) {
 } */
 
 .logo {
-  text-decoration: none;
-  color: #242323;
+  color: var(--color-black);
   text-transform: lowercase;
   letter-spacing: 3px;
   font-family: var(--font-primary);
+
+  align-self: center;
+
+  text-decoration: underline dotted 2px;
 }
 
 .school_logo {
   align-self: start;
 }
 
-section:nth-child(even) {
-  background-color: rgb(245, 245, 245);
+section:nth-child(odd) {
+  background-color: var(--color-grey-100);
 }
 
-section:nth-child(old) {
+section:nth-child(even) {
   background-color: rgb(255, 255, 255);
 }
 
@@ -244,8 +251,8 @@ section:nth-child(old) {
 }
 
 .headshot {
-  height: 20rem;
-  width: 20rem;
+  height: 25rem;
+  width: 25rem;
   border-radius: 50rem;
   object-fit: top;
 
@@ -305,11 +312,11 @@ section:nth-child(old) {
   align-self: start;
 
   padding: 1rem;
-  border: 2px solid grey;
+  border: 2px solid var(--color-grey-200);
   transition: all 0.3s;
 
   &:hover {
-    background-color: grey;
+    background-color: var(--color-grey-300);
     border-radius: 50rem;
     color: #fff;
   }
@@ -329,7 +336,7 @@ section:nth-child(old) {
   align-items: center;
   gap: 3rem;
 
-  background-color: rgb(236, 236, 236);
+  background-color: var(--color-grey-50);
   padding: 3rem;
   border-radius: 0.5rem;
 
@@ -358,7 +365,7 @@ section:nth-child(old) {
 }
 
 .work-company-image {
-  width: 15rem;
+  width: 13rem;
 }
 
 .work-company-name {
@@ -369,8 +376,12 @@ section:nth-child(old) {
 }
 
 .work-company-role-location {
-  margin-bottom: 2rem;
   font-family: var(--font-primary);
+}
+
+.work-duration {
+  margin-top: 2.5rem;
+  font-style: oblique;
 }
 
 /* SECTION SKILLS */
@@ -382,7 +393,7 @@ section:nth-child(old) {
 }
 
 .skill {
-  background-color: #000;
+  background-color: var(--color-black);
   color: #fff;
   font-weight: 600;
   padding: 0.25rem 0.8rem;
@@ -421,10 +432,6 @@ section:nth-child(old) {
 }
 
 /* CONTACT FORM */
-
-.section-contact {
-  /* display: none; */
-}
 
 .contact-details {
   display: flex;
@@ -528,13 +535,13 @@ input[type="submit"] {
 }
 
 .contact-btn {
-  background-color: rgb(180, 180, 180);
-  color: #fff;
   font-weight: 500;
   transition: all 0.2s;
+  border: 2px solid var(--color-grey-200);
 
   &:hover {
-    background-color: grey;
+    background-color: var(--color-grey-200);
+    color: #fff;
   }
 }
 
@@ -572,7 +579,6 @@ aside {
   z-index: 50;
 
   @media only screen and (max-width: 26.1875em) {
-    width: 20rem;
     padding: 2rem;
   }
 
