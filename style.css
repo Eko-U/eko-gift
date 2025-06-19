@@ -76,6 +76,25 @@ ion-icon {
   text-transform: uppercase;
 }
 
+.navigation {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  height: 4rem;
+  padding: 1rem;
+
+  background-color: var(--color-grey-100);
+
+  /* position: fixed;
+  width: 100vw;
+  z-index: 40; */
+
+  @media only screen and (max-width: 39.75em) {
+    padding: 0.5rem;
+  }
+}
+
 .list {
   margin-left: auto;
   display: flex;
@@ -83,6 +102,10 @@ ion-icon {
 
   height: 100%;
   list-style: none;
+
+  @media only screen and (max-width: 42.253em) {
+    gap: 0.5rem;
+  }
 
   @media only screen and (max-width: 40.4375em) {
     display: none;
@@ -105,6 +128,14 @@ ion-icon {
 
   padding: 0 1rem;
   border-radius: 5px;
+
+  @media only screen and (max-width: 56.25em) {
+    font-size: 1.3rem;
+  }
+
+  @media only screen and (max-width: 42.253em) {
+    padding: 0 0.5rem;
+  }
 }
 
 .list-item a:hover,
@@ -120,12 +151,16 @@ ion-icon {
 section,
 .header {
   padding: 8rem 15rem;
-  @media only screen and (max-width: 71.875em) {
+  @media only screen and (max-width: 71.5625em) {
     padding: 5.5rem 10rem;
   }
 
   @media only screen and (max-width: 62.5em) {
     padding: 5rem 7.5rem;
+  }
+
+  @media only screen and (max-width: 45.75em) {
+    padding: 4rem;
   }
 
   @media only screen and (max-width: 34em) {
@@ -170,23 +205,9 @@ h2 {
   }
 }
 
-.navigation {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-
-  height: 4rem;
-  padding: 1rem;
-
-  background-color: var(--color-grey-100);
-
-  /* position: fixed;
-  width: 100vw;
-  z-index: 40; */
-}
-
 .menu-outline {
   display: none;
+
   @media only screen and (max-width: 40.375em) {
     display: block;
     margin-left: auto;
@@ -224,7 +245,7 @@ section:nth-child(even) {
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 48em) {
+  @media only screen and (max-width: 48.5em) {
     flex-direction: column;
     text-align: center;
     gap: 1.8rem;
@@ -236,12 +257,9 @@ section:nth-child(even) {
 }
 
 .header .left {
-  line-height: 1;
+  line-height: 1.15;
 
-  @media screen and (max-width: 71.875em) {
-  }
-
-  @media only screen and (max-width: 48em) {
+  @media only screen and (max-width: 48.5em) {
     order: 2;
   }
 }
@@ -251,6 +269,10 @@ section:nth-child(even) {
   margin-bottom: 0.5rem;
 
   @media screen and (max-width: 71.875em) {
+    font-size: 6rem;
+  }
+
+  @media only screen and (max-width: 62em) {
     font-size: 5rem;
   }
 
@@ -258,14 +280,25 @@ section:nth-child(even) {
     font-size: 4rem;
     margin-bottom: 0.6rem;
   }
+
+  @media only screen and (max-width: 25em) {
+    font-size: 3rem;
+  }
 }
 
 .header .left .title {
   font-size: 1.5rem;
 
-  @media only screen and (max-width: 40.375em) {
+  @media screen and (max-width: 71.875em) {
+    font-size: 1.3rem;
+  }
+
+  @media only screen and (max-width: 62em) {
     font-size: 1.2rem;
-    line-height: 1.4;
+  }
+
+  @media only screen and (max-width: 25em) {
+    font-size: 1rem;
   }
 }
 
@@ -275,13 +308,18 @@ section:nth-child(even) {
   border-radius: 50rem;
   object-fit: top;
 
-  @media only screen and (max-width: 62.5em) {
-    height: 15rem;
-    width: 15rem;
+  @media only screen and (max-width: 71.5625em) {
+    height: 18rem;
+    width: 18rem;
   }
 
   @media only screen and (max-width: 48em) {
     order: 1;
+  }
+
+  @media only screen and (max-width: 30.625em) {
+    height: 13rem;
+    width: 13rem;
   }
 }
 
@@ -419,6 +457,14 @@ section:nth-child(even) {
 
   display: block;
   border-radius: 0.5rem;
+
+  @media only screen and (max-width: 43.75em) {
+    font-size: 1.2rem;
+  }
+
+  @media only screen and (max-width: 29.1875em) {
+    font-size: 1rem;
+  }
 }
 
 /* SECTION PROJECTS */
@@ -433,9 +479,9 @@ section:nth-child(even) {
     gap: 3rem;
   }
 
-  @media only screen and (max-width: 42.1875em) {
+  /* @media only screen and (max-width: 42.1875em) {
     display: block;
-  }
+  } */
 }
 
 .project {
