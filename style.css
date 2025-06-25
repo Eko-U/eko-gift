@@ -166,6 +166,10 @@ section,
   @media only screen and (max-width: 34em) {
     padding: 4rem 2rem;
   }
+
+  @media only screen and (max-width: 28.125em) {
+    padding: 4rem;
+  }
 }
 
 .btn {
@@ -718,6 +722,11 @@ input[type="submit"] {
   margin: 0 auto;
   display: flex;
   gap: 1rem;
+
+  @media only screen and (max-width: 31.25em) {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
 }
 
 ion-icon {
