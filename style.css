@@ -471,17 +471,17 @@ section:nth-child(even) {
 
 .project-lists {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 5rem;
 
   @media only screen and (max-width: 62.5em) {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
     gap: 3rem;
   }
 
-  /* @media only screen and (max-width: 42.1875em) {
-    display: block;
-  } */
+  @media only screen and (max-width: 59.375em) {
+    gap: 1.5rem;
+  }
 }
 
 .project {
@@ -499,27 +499,52 @@ section:nth-child(even) {
   padding: 0.8rem;
 }
 
-.project-image {
+.project-image-container {
   height: 20rem;
+}
+
+.project-image {
+  height: auto;
   width: 100%;
+  object-fit: contain;
+
+  /* @media only screen and (max-width: 39.625em) {
+    object-fit: cover;
+  } */
+
+  @media only screen and (max-width: 19.8125em) {
+    object-fit: contain;
+  }
 }
 
 .project-title {
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+
+  @media only screen and (max-width: 59.375em) {
+    font-size: 1.2rem;
+  }
 }
 
 .project-description {
   font-size: 1.2rem;
-  text-align: justify;
+  /* text-align: justify;
   -ms-hyphens: auto;
-  hyphens: auto;
+  hyphens: auto; */
+
+  @media only screen and (max-width: 59.375em) {
+    font-size: 1rem;
+  }
 }
 
 .project-tools {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  @media only screen and (max-width: 59.375em) {
+    gap: 0.2rem;
+  }
 }
 
 .project-tool {
@@ -534,11 +559,19 @@ section:nth-child(even) {
 
 .tool-icon {
   font-size: 1.4rem;
+
+  @media only screen and (max-width: 59.375em) {
+    font-size: 1rem;
+  }
 }
 
 .tool-title {
   text-transform: uppercase;
   font-size: 1rem;
+
+  @media only screen and (max-width: 59.375em) {
+    font-size: 0.8rem;
+  }
 }
 
 .project-showcase {
