@@ -31,6 +31,12 @@ html {
   }
 } */
 
+.container {
+  @media only screen and (min-width: 87.5em) {
+    width: 130rem;
+  }
+}
+
 body {
   font-family: var(--font-primary);
   font-size: 1.4rem;
@@ -44,6 +50,12 @@ body {
 
 ion-icon {
   cursor: pointer;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--color-grey-300);
 }
 
 .hidden {
@@ -368,7 +380,8 @@ section:nth-child(even) {
   }
 }
 
-.about-me-btn {
+.about-me-bt,
+.projects-btn {
   margin-top: auto;
   align-self: start;
 
@@ -381,6 +394,11 @@ section:nth-child(even) {
     border-radius: 50rem;
     color: #fff;
   }
+}
+
+.projects-btn {
+  margin-top: 5rem;
+  text-align: center;
 }
 
 /* CAREER EXPERIENCE SECTION */
@@ -476,11 +494,11 @@ section:nth-child(even) {
 .project-lists {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  gap: 5rem;
+  gap: 3rem;
 
   @media only screen and (max-width: 62.5em) {
     /* grid-template-columns: repeat(2, 1fr); */
-    gap: 3rem;
+    gap: 2rem;
   }
 
   @media only screen and (max-width: 59.375em) {
@@ -494,6 +512,8 @@ section:nth-child(even) {
   background-color: var(--color-grey-50);
   box-shadow: 0 1px 2px var(--color-grey-100);
   border-radius: 5px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .project-details {
@@ -504,11 +524,12 @@ section:nth-child(even) {
 }
 
 .project-image-container {
-  height: 20rem;
+  height: 100%;
+  border-bottom: 2px solid grey;
 }
 
 .project-image {
-  height: auto;
+  height: 100%;
   width: 100%;
   object-fit: contain;
 
@@ -523,7 +544,7 @@ section:nth-child(even) {
 
 .project-title {
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 
   @media only screen and (max-width: 59.375em) {
     font-size: 1.2rem;
@@ -531,7 +552,7 @@ section:nth-child(even) {
 }
 
 .project-description {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   /* text-align: justify;
   -ms-hyphens: auto;
   hyphens: auto; */
@@ -562,7 +583,7 @@ section:nth-child(even) {
 }
 
 .tool-icon {
-  font-size: 1.4rem;
+  font-size: 1rem;
 
   @media only screen and (max-width: 59.375em) {
     font-size: 1rem;
@@ -571,7 +592,7 @@ section:nth-child(even) {
 
 .tool-title {
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.8rem;
 
   @media only screen and (max-width: 59.375em) {
     font-size: 0.8rem;
@@ -586,7 +607,7 @@ section:nth-child(even) {
 
 .logo-github,
 .globe-outline {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
 }
 
 .section-experience {
