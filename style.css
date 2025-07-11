@@ -536,11 +536,6 @@ section:nth-child(even) {
   padding: 0.8rem;
 }
 
-.project-image-container {
-  height: 100%;
-  border-bottom: 2px solid grey;
-}
-
 .project-image {
   height: 100%;
   width: 100%;
