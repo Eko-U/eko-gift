@@ -527,6 +527,7 @@ section:nth-child(even) {
   border-radius: 5px;
 
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .project-details {
@@ -536,10 +537,16 @@ section:nth-child(even) {
   padding: 0.8rem;
 }
 
-.project-image {
+.project-image-container {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+}
+
+.project-image {
+  margin-top: -3px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 
   /* @media only screen and (max-width: 39.625em) {
     object-fit: cover;
