@@ -389,7 +389,7 @@ section:nth-child(even) {
   }
 }
 
-.about-me-bt,
+.about-me-btn,
 .projects-btn {
   margin-top: auto;
   align-self: start;
