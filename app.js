@@ -42,7 +42,6 @@ let tick = false;
 let showNotification = false;
 
 document.addEventListener("scroll", function (e) {
-  console.log(window.scrollY);
   if (!tick) {
     tick = true;
 

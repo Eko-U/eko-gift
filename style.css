@@ -93,6 +93,7 @@ a:link,
 a:visited {
   text-decoration: none;
   color: var(--color-grey-300);
+  display: inline-block !important;
 }
 
 .hidden {
@@ -227,6 +228,7 @@ section,
   cursor: pointer;
   background-color: transparent;
   border: 1px solid grey;
+  display: block;
 }
 
 /* section {
@@ -279,7 +281,7 @@ h2 {
 
   align-self: center;
 
-  text-decoration: underline dotted 2px;
+  text-decoration: underline dotted !important;
 }
 
 .school_logo {
@@ -444,6 +446,7 @@ section:nth-child(even) {
 .projects-btn {
   margin-top: 5rem;
   text-align: center;
+  justify-self: flex-start;
 }
 
 /* CAREER EXPERIENCE SECTION */
