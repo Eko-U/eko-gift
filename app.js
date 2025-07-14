@@ -57,7 +57,7 @@ document.addEventListener("scroll", function (e) {
         setTimeout(() => {
           document.querySelector(".notification").classList.toggle("hidden");
           showNotification = false;
-        }, 1000);
+        }, 2000);
       }
 
       tick = false;
