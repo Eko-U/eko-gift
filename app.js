@@ -37,3 +37,31 @@ sideList.addEventListener("click", smoothScrollFn);
 sideMenuBtn.addEventListener("click", toggleFn);
 closeBtn.addEventListener("click", toggleFn);
 overlayEl.addEventListener("click", toggleFn);
+
+let tick = false;
+let showNotification = false;
+
+document.addEventListener("scroll", function (e) {
+  console.log(window.scrollY);
+  if (!tick) {
+    tick = true;
+
+    window.requestAnimationFrame(() => {
+      if (
+        window.scrollY >= 1200 &&
+        window.scrollY <= 2000 &&
+        !showNotification
+      ) {
+        document.querySelector(".notification").classList.toggle("hidden");
+        showNotification = true;
+
+        setTimeout(() => {
+          document.querySelector(".notification").classList.toggle("hidden");
+          showNotification = false;
+        }, 1000);
+      }
+
+      tick = false;
+    });
+  }
+});
